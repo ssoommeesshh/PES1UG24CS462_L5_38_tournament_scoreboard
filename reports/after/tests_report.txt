@@ -1,0 +1,16 @@
+test_demo_matches_original_and_resets (test_tournament_scoreboard.ScoreboardTests.test_demo_matches_original_and_resets) ... ok
+test_home_away_and_draw_results (test_tournament_scoreboard.ScoreboardTests.test_home_away_and_draw_results) ... ok
+test_match_statistics (test_tournament_scoreboard.ScoreboardTests.test_match_statistics) ... ok
+test_missing_scp_is_explicit (test_tournament_scoreboard.ScoreboardTests.test_missing_scp_is_explicit) ... ok
+test_publish_propagates_transfer_failure (test_tournament_scoreboard.ScoreboardTests.test_publish_propagates_transfer_failure) ... ok
+test_publish_rejects_shell_and_option_injection (test_tournament_scoreboard.ScoreboardTests.test_publish_rejects_shell_and_option_injection) ... ok
+test_publish_uses_safe_arguments (test_tournament_scoreboard.ScoreboardTests.test_publish_uses_safe_arguments) ... ok
+test_rosters_are_independent (test_tournament_scoreboard.ScoreboardTests.test_rosters_are_independent) ... ok
+test_secure_coin_uses_both_valid_outcomes (test_tournament_scoreboard.ScoreboardTests.test_secure_coin_uses_both_valid_outcomes) ... ok
+test_temporary_file_exists_and_can_be_reopened (test_tournament_scoreboard.ScoreboardTests.test_temporary_file_exists_and_can_be_reopened) ... ok
+test_top_two_for_small_leagues (test_tournament_scoreboard.ScoreboardTests.test_top_two_for_small_leagues) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.018s
+
+OK
