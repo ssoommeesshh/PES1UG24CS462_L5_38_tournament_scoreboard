@@ -1,0 +1,8 @@
+Toss: Heads
+Pos Team Played Won Drawn Lost Pts
+1 Royal Strikers 2 1 1 0 4
+2 City Rovers 2 1 0 1 3
+3 Hill Warriors 2 0 2 0 2
+4 Lake United 2 0 1 1 1
+Is City Rovers in the top two? True
+Matches played: 4

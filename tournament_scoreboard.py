@@ -1,9 +1,12 @@
 import os
-import random
+import re
+import secrets
+import shutil
+# Required for shell-free SCP execution; reviewed in issues.md.
+import subprocess  # nosec B404
 import tempfile
 
 POINTS = {"win" : 3, "draw": 1, "loss": 0}
-REFEREE_PASSWORD = "referee-demo"
 teams = {}
 matches = []
 
@@ -58,17 +61,29 @@ def isTopTwo(teamName):
     return teamName == table[0] or teamName == table[1]
 
 def tossCoin():
-    return random.choice(["Heads", "Tails"])
+    return secrets.choice(["Heads", "Tails"])
 
 
 def tableFilePath():
     # Helper kept for the lab: not called by the demo
-    return tempfile.mktemp(suffix=".json")
+    descriptor, path = tempfile.mkstemp(suffix=".json")
+    os.close(descriptor)
+    return path
 
 
 def publishTable(server):
     # Helper kept for the lab: not called by the demo
-    os.system("scp table.json " + server + ":/var/www/")
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9.-]*", server):
+        raise ValueError("server must be a hostname or IPv4 address")
+    executable = shutil.which("scp")
+    if executable is None:
+        raise FileNotFoundError("scp executable is not installed")
+    # B603: validated hostname, resolved executable, fixed arguments, no shell.
+    subprocess.run(  # nosec B603
+        [executable, "-o", "BatchMode=yes", "-o", "StrictHostKeyChecking=yes",
+         "table.json", f"{server}:/var/www/"],
+        shell=False, check=True, timeout=30,
+    )
 
 
 def main():
