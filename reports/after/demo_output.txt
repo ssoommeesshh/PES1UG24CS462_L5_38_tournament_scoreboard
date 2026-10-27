@@ -1,4 +1,4 @@
-Toss: Heads
+Toss: Tails
 Pos Team Played Won Drawn Lost Pts
 1 Royal Strikers 2 1 1 0 4
 2 City Rovers 2 1 0 1 3

@@ -11,6 +11,6 @@ test_temporary_file_exists_and_can_be_reopened (test_tournament_scoreboard.Score
 test_top_two_for_small_leagues (test_tournament_scoreboard.ScoreboardTests.test_top_two_for_small_leagues) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.018s
+Ran 11 tests in 0.023s
 
 OK
